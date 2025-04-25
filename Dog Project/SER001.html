@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 - 멍멍 생각</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">멍멍 생각</div>
+            <div class="header-icons">
+                <a href="SER001.html" title="검색">🔍</a>
+                <a href="ALM001.html" title="알림">🔔</a>
+                <a href="SET001.html" title="설정">⚙️</a>
+            </div>
+        </div>
+        <div class="search-section">
+            <h2>멍! 뭘 찾고 싶으신가요?</h2>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="키워드를 입력해주세요 (예: 산책, 푸들)" required>
+                <button type="submit" class="search-btn">검색 🐾</button>
+            </form>
+            <div class="search-tabs">
+                <button class="active" onclick="showSearchTab('posts')">게시물</button>
+                <button onclick="show">프로필</button>
+                <button onclick="showSearchTab('messages')">메시지</button>
+            </div>
+            <div id="searchResults" class="tab-content">
+                <p id="searchMessage">멍! 키워드를 입력하면 결과를 찾아드릴게요!</p>
+                <div id="postsTab" class="tab-content active"></div>
+                <div id="profilesTab" class="tab-content" style="display: none;"></div>
+                <div id="messagesTab" class="tab-content" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="HOM001.html" class="nav-button">
+                <span>🐶</span>
+                홈
+            </a>
+            <a href="CMM001.html" class="nav-button">
+                <span>🐕</span>
+                멍멍광장
+            </a>
+            <a href="CHA001.html" class="nav-button">
+                <span>💬</span>
+                채팅
+            </a>
+            <a href="MYP001.html" class="nav-button">
+                <span>🦮</span>
+                프로필
+            </a>
+        </div>
+    </div>
+    <script src="assets/js/search.js"></script>
+</body>
+</html>

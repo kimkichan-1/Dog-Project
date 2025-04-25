@@ -1,0 +1,461 @@
+/* assets/css/profile.css */
+.signup-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px - 60px);
+    padding: 20px;
+    overflow-y: auto;
+    align-items: center;
+    background-color: #fff;
+}
+
+.signup-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.description {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    text-align: left;
+    width: 100%;
+    color: #333;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="date"], input[type="file"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"]::placeholder, select::placeholder {
+    color: #999;
+}
+
+.height-weight-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.height-weight-group input[type="number"] {
+    width: calc(50% - 5px);
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 프로필 출력 스타일 */
+.profile-section {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px - 60px);
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.profile-banner {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 10px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.profile-banner button {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.profile-banner button.active {
+    background-color: #e6f0ff;
+    border-color: #007bff;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.profile-banner button:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-right: 15px;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-personality {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.profile-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.profile-tabs button {
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.profile-tabs button.active {
+    background-color: #e6f0ff;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+.profile-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.detail-item span:first-child {
+    color: #666;
+}
+
+.detail-item span:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.owner-info {
+    margin-bottom: 20px;
+}
+
+.owner-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.owner-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.owner-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+
+.owner-actions button.edit {
+    background-color: #ff4d4d;
+}
+
+.owner-actions button.edit:hover {
+    background-color: #e63939;
+}
+
+.owner-actions button.add {
+    background-color: #007bff;
+}
+
+.owner-actions button.add:hover {
+    background-color: #0056b3;
+}
+
+.delete-action {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 0 20px 20px;
+}
+
+.delete-action button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-action button:hover {
+    background-color: #c82333;
+}
+
+/* 건강 기록 및 발도장 스타일 */
+.health-record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.health-record:hover {
+    background-color: #f0f0f0;
+}
+
+.record-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.record-icon.vaccination {
+    color: #28a745; /* 초록색 */
+}
+
+.record-icon.heartworm {
+    color: #17a2b8; /* 청록색 */
+}
+
+.record-icon.checkup {
+    color: #ffc107; /* 노란색 */
+}
+
+.record-icon.footprint {
+    color: #ff6f61; /* 코랄색 */
+}
+
+.record-info {
+    flex: 1;
+}
+
+.record-info span:first-child {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.record-info span:last-child {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.health-record span:last-child {
+    font-size: 12px;
+    color: #666;
+}
+
+.health-subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* 모달 팝업 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+select, input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn.save {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-btn.save:hover {
+    background-color: #0056b3;
+}
+
+.modal-btn.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-btn.cancel:hover {
+    background-color: #c82333;
+}
+
+.modal-btn.delete {
+    background-color: #ff6f61; /* home.css의 .modal-btn.fail과 동일 */
+    color: white;
+}
+
+.modal-btn.delete:hover {
+    background-color: #ff4d4d;
+}

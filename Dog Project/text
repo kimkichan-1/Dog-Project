@@ -1,0 +1,29 @@
+project/
+│
+├── assets/
+│   ├── css/
+│   │   ├── common.css
+│   │   ├── home.css
+│   │   ├── profile.css
+│   │   ├── community.css
+│   │   ├── post.css
+│   │   ├── write.css
+│   │   ├── chat.css       # 추가
+│   │
+│   ├── js/
+│   │   ├── common.js
+│   │   ├── home.js
+│   │   ├── profile.js
+│   │   ├── community.js
+│   │   ├── post.js
+│   │   ├── write.js
+│   │   ├── chat.js        # 추가
+│   │
+│   └── images/
+│
+├── HOM001.html
+├── MYP001.html
+├── CMM001.html
+├── CMM002.html
+├── CMM003.html
+├── CHA001.html            # 수정

@@ -1,0 +1,269 @@
+.post-section {
+    padding: 20px;
+    background-color: #fff;
+    height: calc(100vh - 60px - 60px);
+    overflow-y: auto;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#postActions button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#postActions button:hover {
+    background-color: #0056b3;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.post-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like-btn {
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.like-btn.liked {
+    background-color: #dc3545;
+}
+
+.like-btn:hover {
+    background-color: #ff4d4d;
+}
+
+.like-btn.liked:hover {
+    background-color: #c82333;
+}
+
+.like-btn .heart-icon {
+    display: inline-block;
+}
+
+.like-btn.animate .heart-icon {
+    animation: heartPulse 0.3s ease-in-out;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comment-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.comment-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.comment-actions .edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.comment-actions .edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.comment-actions .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.comment-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.comments-section form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comments-section input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comments-section button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-section button:hover {
+    background-color: #0056b3;
+}
+
+.comments-section p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.post-section button {
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.post-section button:hover {
+    background-color: #ff4d4d;
+}
+
+/* 모달 팝업 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn.delete {
+    background-color: #ff6f61; /* home.css의 .modal-btn.fail과 동일 */
+    color: white;
+}
+
+.modal-btn.delete:hover {
+    background-color: #ff4d4d;
+}
+
+.modal-btn.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-btn.cancel:hover {
+    background-color: #c82333;
+}
