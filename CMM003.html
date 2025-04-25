@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멍멍 생각 - 게시물</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/post.css">
+</head>
+<body data-screen-id="CMM003">
+    <div class="container">
+        <div class="header">
+            <div class="logo">멍멍 생각</div>
+            <div class="header-icons">
+                <a href="SER001.html" title="검색">🔍</a>
+                <a href="ALM001.html" title="알림">🔔</a>
+                <a href="SET001.html" title="설정">⚙️</a>
+            </div>
+        </div>
+
+        <div class="post-section">
+            <div class="post-header">
+                <h2 id="postTitle"></h2>
+                <div id="postActions" style="display: none;">
+                    <button onclick="editPost()">수정</button>
+                    <button onclick="openDeletePostPopup()">삭제</button>
+                </div>
+            </div>
+            <div class="post-meta">
+                <span id="postTag"></span>
+            </div>
+            <div class="post-content" id="postContent"></div>
+            <div class="post-stats">
+                <span>❤️ <span id="postLikes"></span></span>
+                <span>💬 <span id="postComments"></span></span>
+                <span>👀 <span id="postViews"></span></span>
+            </div>
+            <button class="like-btn" id="likeBtn" onclick="toggleLike()">좋아요</button>
+            <div class="comments-section">
+                <h3>댓글</h3>
+                <div id="commentsList"></div>
+                <form onsubmit="addComment(event)" id="commentForm">
+                    <input type="text" id="commentInput" placeholder="댓글을 입력하세요" required>
+                    <button type="submit" id="commentSubmitBtn">작성</button>
+                </form>
+            </div>
+            <button onclick="window.location.href='CMM001.html'">이전</button>
+        </div>
+
+        <div class="nav-bar">
+            <a href="HOM001.html" class="nav-button">
+                <span>🐶</span>
+                홈
+            </a>
+            <a href="CMM001.html" class="nav-button active">
+                <span>🐕</span>
+                멍멍광장
+            </a>
+            <a href="CHA001.html" class="nav-button">
+                <span>💬</span>
+                채팅
+            </a>
+            <a href="MYP001.html" class="nav-button">
+                <span>🦮</span>
+                프로필
+            </a>
+        </div>
+    </div>
+
+    <!-- 게시물 삭제 확인 팝업 -->
+    <div class="modal" id="deletePostPopup">
+        <div class="modal-content">
+            <h3>게시물 삭제</h3>
+            <p>정말로 이 게시물을 삭제하시겠습니까?</p>
+            <div class="modal-actions">
+                <button class="modal-btn delete" onclick="confirmDeletePost()">삭제</button>
+                <button class="modal-btn cancel" onclick="closeDeletePostPopup()">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 댓글 삭제 확인 팝업 -->
+    <div class="modal" id="deleteCommentPopup">
+        <div class="modal-content">
+            <h3>댓글 삭제</h3>
+            <p>정말로 이 댓글을 삭제하시겠습니까?</p>
+            <div class="modal-actions">
+                <button class="modal-btn delete" onclick="confirmDeleteComment()">삭제</button>
+                <button class="modal-btn cancel" onclick="closeDeleteCommentPopup()">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/post.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93544cdafe7e7ba0',t:'MTc0NTQ4NDA3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

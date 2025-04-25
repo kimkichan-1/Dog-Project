@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멍멍 생각 - 멍멍광장</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/community.css">
+</head>
+<body data-screen-id="CMM001">
+    <div class="container">
+        <div class="header">
+            <div class="logo">멍멍 생각</div>
+            <div class="header-icons">
+                <a href="SER001.html" title="검색">🔍</a>
+                <a href="ALM001.html" title="알림">🔔</a>
+                <a href="SET001.html" title="설정">⚙️</a>
+            </div>
+        </div>
+
+        <!-- 프로필 미등록 시 표시 -->
+        <div class="no-profile-section" id="noProfileSection">
+            <p>프로필을 등록해주세요!</p>
+            <a href="MYP001.html" class="profile-btn">프로필로 이동</a>
+        </div>
+
+        <!-- 멍멍광장 페이지 -->
+        <div class="community-section" id="communitySection" style="display: none;">
+            <!-- 멍멍광장 헤더 -->
+            <div class="community-header">
+                <h2>멍멍광장</h2>
+                <a href="CMM002.html" class="write-btn">글쓰기</a>
+            </div>
+
+            <!-- 탭 -->
+            <div class="community-tabs">
+                <button class="active" onclick="showCommunityTab('all')">전체</button>
+                <button onclick="showCommunityTab('breed')">견종별</button>
+                <button onclick="showCommunityTab('topic')">주제별</button>
+                <button onclick="showCommunityTab('popular')">인기글</button>
+            </div>
+
+            <!-- 게시물 목록 -->
+            <div id="allTab" class="tab-content">
+                <div class="post-count" id="allCount"></div>
+                <div id="allPosts"></div>
+            </div>
+            <div id="breedTab" class="tab-content" style="display: none;">
+                <div class="breed-grid" id="breedGrid"></div>
+                <div class="post-count" id="breedCount"></div>
+                <div id="breedPosts"></div>
+            </div>
+            <div id="topicTab" class="tab-content" style="display: none;">
+                <div class="topic-grid" id="topicGrid"></div>
+                <div class="post-count" id="topicCount"></div>
+                <div id="topicPosts"></div>
+            </div>
+            <div id="popularTab" class="tab-content" style="display: none;">
+                <div class="post-count" id="popularCount"></div>
+                <div id="popularPosts"></div>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <a href="HOM001.html" class="nav-button">
+                <span>🐶</span>
+                홈
+            </a>
+            <a href="CMM001.html" class="nav-button active">
+                <span>🐕</span>
+                멍멍광장
+            </a>
+            <a href="CHA001.html" class="nav-button">
+                <span>💬</span>
+                채팅
+            </a>
+            <a href="MYP001.html" class="nav-button">
+                <span>🦮</span>
+                프로필
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/community.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멍멍 생각 - 프로필</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body data-screen-id="MYP001">
+    <div class="container">
+        <div class="header">
+            <div class="logo">멍멍 생각</div>
+            <div class="header-icons">
+                <a href="SER001.html" title="검색">🔍</a>
+                <a href="ALM001.html" title="알림">🔔</a>
+                <a href="SET001.html" title="설정">⚙️</a>
+            </div>
+        </div>
+        <div class="signup-section" id="signupSection">
+            <div class="signup-title">프로필 등록</div>
+            <p class="description">멍멍 생각에 오신 것을 환영합니다! 강아지와 보호자 정보를 입력해주세요.</p>
+            <form onsubmit="return signup(event)">
+                <!-- 강아지 정보 -->
+                <div class="section-title">강아지 정보</div>
+                <div class="form-group">
+                    <input type="text" id="dog-name" placeholder="반려견 이름" required>
+                </div>
+                <div class="form-group">
+                    <select id="dog-gender" required>
+                        <option value="" disabled selected>성별 선택</option>
+                        <option value="male">수컷</option>
+                        <option value="female">암컷</option>
+                        <option value="neutered">중성화</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="dog-birthdate" required>
+                </div>
+                <div class="form-group">
+                    <select id="dog-breed" required>
+                        <option value="" disabled selected>견종 선택</option>
+                        <option value="pomeranian">포메라니안</option>
+                        <option value="golden-retriever">골든 리트리버</option>
+                        <option value="shiba-inu">시바 이누</option>
+                        <option value="bulldog">불독</option>
+                        <option value="labrador-retriever">래브라도 리트리버</option>
+                        <option value="poodle">푸들</option>
+                        <option value="dachshund">닥스훈트</option>
+                        <option value="beagle">비글</option>
+                        <option value="chihuahua">치와와</option>
+                        <option value="siberian-husky">시베리안 허스키</option>
+                        <option value="yorkshire-terrier">요크셔 테리어</option>
+                        <option value="maltese">말티즈</option>
+                        <option value="border-collie">보더 콜리</option>
+                        <option value="german-shepherd">저먼 셰퍼드</option>
+                    </select>
+                </div>
+                <div class="form-group height-weight-group">
+                    <input type="number" id="dog-weight" placeholder="몸무게 (kg)" step="0.1">
+                    <input type="number" id="dog-size" placeholder="크기 (cm)" step="0.1">
+                </div>
+                <div class="form-group">
+                    <div class="section-title">성격 태그 (복수 선택 가능)</div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="personality" value="겁 많음"> 겁 많음</label>
+                        <label><input type="checkbox" name="personality" value="활발함"> 활발함</label>
+                        <label><input type="checkbox" name="personality" value="사교적"> 사교적</label>
+                        <label><input type="checkbox" name="personality" value="장난꾸러기"> 장난꾸러기</label>
+                        <label><input type="checkbox" name="personality" value="차분함"> 차분함</label>
+                        <label><input type="checkbox" name="personality" value="호기심 많음"> 호기심 많음</label>
+                        <label><input type="checkbox" name="personality" value="느긋함"> 느긋함</label>
+                        <label><input type="checkbox" name="personality" value="보호적"> 보호적</label>
+                        <label><input type="checkbox" name="personality" value="고집 셈"> 고집 셈</label>
+                        <label><input type="checkbox" name="personality" value="애교 많음"> 애교 많음</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="section-title">좋아하는 것 (복수 선택 가능)</div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="likes" value="간식"> 간식</label>
+                        <label><input type="checkbox" name="likes" value="산책"> 산책</label>
+                        <label><input type="checkbox" name="likes" value="물놀이"> 물놀이</label>
+                        <label><input type="checkbox" name="likes" value="장난감"> 장난감</label>
+                        <label><input type="checkbox" name="likes" value="배 만지기"> 배 만지기</label>
+                        <label><input type="checkbox" name="likes" value="공놀이"> 공놀이</label>
+                        <label><input type="checkbox" name="likes" value="안기기"> 안기기</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="section-title">싫어하는 것 (복수 선택 가능)</div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="dislikes" value="목욕"> 목욕</label>
+                        <label><input type="checkbox" name="dislikes" value="병원"> 병원</label>
+                        <label><input type="checkbox" name="dislikes" value="큰 소리"> 큰 소리</label>
+                        <label><input type="checkbox" name="dislikes" value="낯선 사람"> 낯선 사람</label>
+                        <label><input type="checkbox" name="dislikes" value="발톱 깎기"> 발톱 깎기</label>
+                        <label><input type="checkbox" name="dislikes" value="목줄"> 목줄</label>
+                        <label><input type="checkbox" name="dislikes" value="차 타기"> 차 타기</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dog-profile">프로필 이미지</label>
+                    <input type="file" id="dog-profile" accept="image/*">
+                    <select id="dog-illustration">
+                        <option value="" disabled selected>기본 일러스트 선택 (선택)</option>
+                        <option value="pomeranian">포메라니안</option>
+                        <option value="golden-retriever">골든 리트리버</option>
+                        <option value="shiba-inu">시바 이누</option>
+                        <option value="bulldog">불독</option>
+                        <option value="labrador-retriever">래브라도 리트리버</option>
+                        <option value="poodle">푸들</option>
+                        <option value="dachshund">닥스훈트</option>
+                        <option value="beagle">비글</option>
+                        <option value="chihuahua">치와와</option>
+                        <option value="siberian-husky">시베리안 허스키</option>
+                        <option value="yorkshire-terrier">요크셔 테리어</option>
+                        <option value="maltese">말티즈</option>
+                        <option value="border-collie">보더 콜리</option>
+                        <option value="german-shepherd">저먼 셰퍼드</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="section-title">건강 상태 (복수 선택 가능)</div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="health" value="알레르기"> 알레르기</label>
+                        <label><input type="checkbox" name="health" value="관절염"> 관절염</label>
+                        <label><input type="checkbox" name="health" value="피부 문제"> 피부 문제</label>
+                        <label><input type="checkbox" name="health" value="비만"> 비만</label>
+                        <label><input type="checkbox" name="health" value="치아 문제"> 치아 문제</label>
+                        <label><input type="checkbox" name="health" value="심장 문제"> 심장 문제</label>
+                        <label><input type="checkbox" name="health" value="시력 문제"> 시력 문제</label>
+                        <label><input type="checkbox" name="health" value="이상없음"> 이상없음</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select id="dog-activity">
+                        <option value="" disabled selected>활동 빈도 (선택)</option>
+                        <option value="low">낮음 (하루 1회 이하)</option>
+                        <option value="medium">보통 (하루 1~2회)</option>
+                        <option value="high">높음 (하루 3회 이상)</option>
+                    </select>
+                </div>
+
+                <!-- 보호자 정보 -->
+                <div class="section-title">보호자 정보</div>
+                <div class="form-group">
+                    <input type="text" id="owner-nickname" placeholder="보호자 닉네임 (공개용)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="owner-region" placeholder="거주 지역 (예: 서울 강남구, 선택)">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="owner-phone" placeholder="연락처 (예: 010-1234-5678, 선택)">
+                </div>
+                <div class="form-group">
+                    <select id="owner-experience">
+                        <option value="" disabled selected>반려 경험 (선택)</option>
+                        <option value="beginner">초보 보호자</option>
+                        <option value="experienced">경험 보호자</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="signup-btn">프로필 등록</button>
+            </form>
+        </div>
+        <div class="profile-section" id="profileSection">
+            <div class="profile-banner" id="profileBanner"></div>
+            <div class="profile-header">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h2 id="profileDogName"></h2>
+                    <p id="profileDogDetails"></p>
+                    <p id="profilePersonality" class="profile-personality"></p>
+                </div>
+            </div>
+            <div class="profile-tabs">
+                <button class="active" onclick="showTab('basic')">기본 정보</button>
+                <button onclick="showTab('health')">건강 기록</button>
+                <button onclick="showTab('footprints')">발도장 목록</button>
+            </div>
+            <div class="profile-details" id="profileDetails">
+                <!-- 기본 정보 -->
+                <div id="basicTab" class="tab-content">
+                    <h3 id="basicTitle"></h3>
+                    <div class="detail-item">
+                        <span>생일</span>
+                        <span id="profileDogBirthdate"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span>몸무게</span>
+                        <span id="profileDogWeight"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span>좋아하는 것</span>
+                        <span id="profileDogLikes"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span>싫어하는 것</span>
+                        <span id="profileDogDislikes"></span>
+                    </div>
+                </div>
+                <!-- 건강 기록 -->
+                <div id="healthTab" class="tab-content" style="display: none;">
+                    <h3>건강 기록</h3>
+                    <p class="health-subtitle">예방접종 및 건강검진 기록</p>
+                    <div class="health-record" onclick="openHealthPopup('vaccination')">
+                        <span class="record-icon vaccination">💉</span>
+                        <div class="record-info">
+                            <span>종합 예방접종</span>
+                            <span id="vaccinationHospital"></span>
+                        </div>
+                        <span id="vaccinationDate"></span>
+                    </div>
+                    <div class="health-record" onclick="openHealthPopup('heartworm')">
+                        <span class="record-icon heartworm">🐾</span>
+                        <div class="record-info">
+                            <span>심장사상충 예방</span>
+                            <span id="heartwormHospital"></span>
+                        </div>
+                        <span id="heartwormDate"></span>
+                    </div>
+                    <div class="health-record" onclick="openHealthPopup('checkup')">
+                        <span class="record-icon checkup">📋</span>
+                        <div class="record-info">
+                            <span>건강검진</span>
+                            <span id="checkupHospital"></span>
+                        </div>
+                        <span id="checkupDate"></span>
+                    </div>
+                </div>
+                <!-- 발도장 목록 -->
+                <div id="footprintsTab" class="tab-content" style="display: none;">
+                    <h3>발도장 목록</h3>
+                    <div class="health-record" onclick="openFootprintPopup()">
+                        <span class="record-icon footprint">🐾</span>
+                        <div class="record-info">
+                            <span>강아지공원</span>
+                            <span id="footprintLocation"></span>
+                        </div>
+                        <span id="footprintDate"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="owner-info" id="ownerInfo">
+                <!-- 기본 정보 -->
+                <div id="basicOwnerTab" class="tab-content">
+                    <h3>알레르기 및 주의사항</h3>
+                    <div id="profileDogHealth"></div>
+                </div>
+                <!-- 건강 기록 -->
+                <div id="healthOwnerTab" class="tab-content" style="display: none;">
+                </div>
+                <!-- 발도장 목록 -->
+                <div id="footprintsOwnerTab" class="tab-content" style="display: none;">
+                    <h3>발도장 기록</h3>
+                </div>
+            </div>
+            <div class="owner-actions">
+                <button class="edit" onclick="editProfile()">정보 수정</button>
+                <button class="add" onclick="addNewProfile()">추가 등록</button>
+            </div>
+            <div class="delete-action">
+                <button onclick="openDeletePopup()">프로필 삭제</button>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="HOM001.html" class="nav-button">
+                <span>🐶</span>
+                홈
+            </a>
+            <a href="CMM001.html" class="nav-button">
+                <span>🐕</span>
+                멍멍광장
+            </a>
+            <a href="CHA001.html" class="nav-button">
+                <span>💬</span>
+                채팅
+            </a>
+            <a href="MYP001.html" class="nav-button active">
+                <span>🦮</span>
+                프로필
+            </a>
+        </div>
+    </div>
+
+    <!-- 건강 기록 입력 팝업 -->
+    <div class="modal" id="healthPopup">
+        <div class="modal-content">
+            <h3 id="popupTitle"></h3>
+            <form onsubmit="saveHealthRecord(event)">
+                <div class="form-group">
+                    <label for="hospitalName">병원 이름</label>
+                    <input type="text" id="hospitalName" placeholder="병원 이름을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="recordDate">날짜</label>
+                    <input type="date" id="recordDate" required>
+                </div>
+                <input type="hidden" id="recordType">
+                <div class="modal-actions">
+                    <button type="submit" class="modal-btn save">저장</button>
+                    <button type="button" class="modal-btn cancel" onclick="closeHealthPopup()">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 발도장 기록 입력 팝업 -->
+    <div class="modal" id="footprintPopup">
+        <div class="modal-content">
+            <h3>발도장 기록 추가</h3>
+            <form onsubmit="saveFootprint(event)">
+                <div class="form-group">
+                    <label for="footprintLocationInput">장소</label>
+                    <input type="text" id="footprintLocationInput" placeholder="장소를 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="footprintDateInput">날짜</label>
+                    <input type="date" id="footprintDateInput" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="modal-btn save">저장</button>
+                    <button type="button" class="modal-btn cancel" onclick="closeFootprintPopup()">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 삭제 확인 팝업 -->
+    <div class="modal" id="deletePopup">
+        <div class="modal-content">
+            <h3>프로필 삭제</h3>
+            <p>정말로 이 프로필을 삭제하시겠습니까?</p>
+            <div class="modal-actions">
+                <button class="modal-btn delete" onclick="confirmDelete()">삭제</button>
+                <button class="modal-btn cancel" onclick="closeDeletePopup()">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/profile.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93543e1eaf9db0c1',t:'MTc0NTQ4MzQ2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
